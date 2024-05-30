@@ -1,0 +1,356 @@
+@import url('https://fonts.googleapis.com/css?family=Muli&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:400,500&display=swap');
+
+
+* {
+	box-sizing: border-box;
+}
+
+
+ 
+.container {
+	background-color: #fff;
+	border-radius: 5px;
+	box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+	overflow: hidden;
+	width: 400px;
+	max-width: 100%;
+	position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.header {
+	border-bottom: 1px solid #f0f0f0;
+	background-color: #fff;
+	padding: 20px 40px;
+}
+
+.header h2 {
+	margin: 0;
+}
+
+.form {
+	padding: 30px 40px;
+}
+
+.form-control {
+	margin-bottom: 10px;
+	padding-bottom: 20px;
+	position: relative;
+	border: 1px solid #fff;
+}
+
+.form-control label {
+	display: inline-block;
+	margin-bottom: 5px;
+}
+
+.form-control input {
+	border: 2px solid #f0f0f0;
+	border-radius: 4px;
+	display: block;
+	font-family: inherit;
+	font-size: 14px;
+	padding: 10px;
+	width: 100%;
+}
+
+.form-control input:focus {
+	outline: 0;
+	border-color: #777;
+}
+
+.form-control.success input {
+	border-color: #2ecc71;
+}
+
+.form-control.error input {
+	border-color: #e74c3c;
+}
+
+.form-control i {
+	visibility: hidden;
+	position: absolute;
+	top: 40px;
+	right: 10px;
+}
+
+.form-control.success i.fa-check-circle {
+	color: #2ecc71;
+	visibility: visible;
+}
+
+.form-control.error i.fa-exclamation-circle {
+	color: #e74c3c;
+	visibility: visible;
+}
+
+.form-control small {
+	color: #e74c3c;
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	visibility: hidden;
+}
+
+.form-control.error small {
+	visibility: visible;
+}
+
+.form #submit {
+
+
+	border-style: outset;
+	border-color: #0066A2;
+	height: 50px;
+	width: 100px;
+	font: bold15px arial,sans-serif;
+
+	background: #016ABC;
+color: #fff;
+border: 1px solid #eee;
+border-radius: 20px;
+box-shadow: 5px 5px 5px #eee;
+text-shadow: none;
+
+}
+.navbars {
+  background-color: #ff4c68;
+  color: #fff;
+ 
+}
+
+.nav-container {
+  width: 80%;
+  margin: 0 auto;
+  overflow: hidden;
+}
+
+.navbar-brand {
+  float: left;
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.navbar-menu {
+  float: right;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  padding: 20px;
+}
+
+.navbar-menu li {
+  display: inline-block;
+  margin-left: 20px;
+}
+/*  */
+.navbar-menu li a {
+color: rgba(255,255,255,.55);
+  text-decoration: none;
+  font-size: 18px;
+}
+
+.navbar-menu li a:hover {
+  color: #ccc;
+}
+
+@import url('https://fonts.googleapis.com/css?family=Muli&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:400,500&display=swap');
+
+
+* {
+	box-sizing: border-box;
+}
+
+body {
+	
+
+background-size: cover;
+	font-family: 'Open Sans', sans-serif;
+
+	align-items: center;
+	justify-content: center;
+	margin: 0;
+  padding: 0;
+  height: 100vh; /* Set body height to 100% of viewport height */
+  overflow: auto;
+}
+
+
+.header {
+	border-bottom: 1px solid #f0f0f0;
+	background-color: #fff;
+	padding: 20px 40px;
+}
+
+.header h2 {
+	margin: 0;
+    padding-right: 100%;
+}
+
+.form {
+	padding: 30px 40px;
+}
+
+.form-control {
+	margin-bottom: 10px;
+	padding-bottom: 20px;
+	position: relative;
+}
+
+.form-control label {
+	display: inline-block;
+	margin-bottom: 5px;
+    padding-right: 100%;
+}
+
+.form-control input {
+	
+	border-radius: 4px;
+	display: block;
+	font-family: inherit;
+	font-size: 14px;
+	padding: 10px;
+	width: 100%;
+}
+
+.form-control input:focus {
+	outline: 0;
+	border-color: #777;
+}
+
+.form-control.success input {
+	border-color: #2ecc71;
+}
+
+.form-control.error input {
+	border-color: #e74c3c;
+}
+
+.form-control i {
+	visibility: hidden;
+	position: absolute;
+	top: 40px;
+	right: 10px;
+}
+
+.form-control.success i.fa-check-circle {
+	color: #2ecc71;
+	visibility: visible;
+}
+
+.form-control.error i.fa-exclamation-circle {
+	color: #e74c3c;
+	visibility: visible;
+}
+
+.form-control small {
+	color: #e74c3c;
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	visibility: hidden;
+}
+
+.form-control.error small {
+	visibility: visible;
+}
+
+.form #submit {
+
+
+	border-style: outset;
+	border-color: #0066A2;
+	height: 50px;
+	width: 100px;
+	font: bold15px arial,sans-serif;
+
+	background: #016ABC;
+color: #fff;
+border: 1px solid #eee;
+border-radius: 20px;
+box-shadow: 5px 5px 5px #eee;
+text-shadow: none;
+
+}
+.navbar {
+  background-color: #ff4c68;
+  color: #fff;
+  
+}
+
+.nav-container {
+  width: 80%;
+  margin: 0 auto;
+  overflow: hidden;
+}
+
+.navbar-brand {
+  float: left;
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.navbar-menu {
+  float: right;
+  list-style: none;
+  margin: 0;
+ 
+}
+
+.navbar-menu li {
+  display: inline-block;
+  margin-left: 20px;
+}
+
+.navbar-menu li a {
+color: rgba(255,255,255,.55);
+  text-decoration: none;
+  font-size: 18px;
+}
+
+.navbar-menu li a:hover {
+  color: #ccc;
+}
+
+/* ------- */
+
+col-md-4 {
+    flex: 0 0 31%; /* Adjust this value based on your layout */
+    margin-bottom: 20px;
+}
+
+.cards {
+    flex: 1;
+    margin: 0 10px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.cards-title {
+    
+    margin-bottom: 20px;
+    text-align: center;
+}
+.card-title .cardHeader{
+    color: white;
+}
+.cardHeader{
+    color: black;
+}
+.cards-body {
+    padding: 20px;
+}
+
+.label {
+    font-weight: bold;
+    color: black;
+}
+
+.value {
+    color: #999;
+}

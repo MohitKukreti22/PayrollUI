@@ -1,0 +1,48 @@
+/* EmployeeRegister.css */
+
+.containerss {
+    max-width: 600px;
+    margin: auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+  
+  .registration-form .form-group {
+    margin-bottom: 20px;
+  }
+  
+  .registration-form label {
+    display: block;
+    margin-bottom: 5px;
+  }
+  
+  .registration-form input[type="text"],
+  .registration-form input[type="email"],
+  .registration-form input[type="date"],
+  .registration-form input[type="password"],
+  .registration-form input[type="tel"] {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+  }
+  
+  .registration-form .btn {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+  }
+  
+  .error-message {
+    color: red;
+    font-size: 14px;
+  }
+  
