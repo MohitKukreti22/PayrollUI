@@ -1,0 +1,20 @@
+.container-fluid {
+    padding: 20px;
+  }
+  
+  .sidebar {
+    background-color: #f8f9fa;
+    padding: 20px;
+    border-right: 1px solid #dee2e6;
+  }
+  
+  .card {
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    padding: 20px;
+  }
+  
+  .btn-light {
+    margin-bottom: 10px;
+  }

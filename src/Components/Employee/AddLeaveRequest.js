@@ -131,6 +131,7 @@
 // export default AddLeaveRequest;
 
 import React, { useState, useEffect } from 'react';
+import './AddLeaveRequest.css'; // Make sure to create and link this CSS file
 
 const AddLeaveRequest = () => {
   const [employeeId, setEmployeeId] = useState('');
@@ -140,13 +141,13 @@ const AddLeaveRequest = () => {
   const [response, setResponse] = useState(null);
   const [token, setToken] = useState('');
   const [showResponse, setShowResponse] = useState(false);
+  const [activeCard, setActiveCard] = useState(null); // New state for managing active card
 
   useEffect(() => {
     const storedEmployeeId = sessionStorage.getItem('employeeID');
     if (storedEmployeeId) {
       setEmployeeId(storedEmployeeId);
     }
-
     const storedToken = sessionStorage.getItem('token');
     if (storedToken) {
       setToken(storedToken);
@@ -155,7 +156,6 @@ const AddLeaveRequest = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-
     const url = `https://localhost:7198/api/EmployeeLeaveRequest/request?employeeId=${employeeId}&leaveType=${leaveType}&startDate=${startDate}&endDate=${endDate}`;
 
     const requestOptions = {
@@ -178,7 +178,6 @@ const AddLeaveRequest = () => {
         alert('Leave request submitted successfully!');
       })
       .catch(error => {
-        // Show alert to the user
         alert(error.message);
       });
   };
@@ -200,48 +199,48 @@ const AddLeaveRequest = () => {
         setShowResponse(true);
       })
       .catch(error => {
-        // Show alert to the user
         alert(error.message);
-
       });
   };
 
-  const handleCancel = () => {
-    setShowResponse(false);
-  };
-
   return (
-    <div className="containers mt-5">
-      <div className="row justify-content-center">
-        <div className="col-md-6">
-          <div className="cards mb-4">
-            <div className="cards-body">
-              <h3 className="cards-title">Request Leave</h3>
-              <form onSubmit={handleSubmit}>
-                <div className="mb-3">
-                  <label htmlFor="leaveType" className="form-label">Leave Type:</label>
-                  <input type="text" className="form-control" id="leaveType" value={leaveType} onChange={(e) => setLeaveType(e.target.value)} />
-                </div>
-                <div className="mb-3">
-                  <label htmlFor="startDate" className="form-label">Start Date:</label>
-                  <input type="date" className="form-control" id="startDate" value={startDate} onChange={(e) => setStartDate(e.target.value)} />
-                </div>
-                <div className="mb-3">
-                  <label htmlFor="endDate" className="form-label">End Date:</label>
-                  <input type="date" className="form-control" id="endDate" value={endDate} onChange={(e) => setEndDate(e.target.value)} />
-                </div>
-                <button type="submit" className="btn btn-primary">Submit</button>
-              </form>
-            </div>
+    <div className="container-fluid mt-5">
+      <div className="row">
+        <div className="col-md-3">
+          <div className="sidebar">
+            <button className="btn btn-light w-100 mb-3" onClick={() => setActiveCard('requestLeave')}>Request Leave</button>
+            <button className="btn btn-light w-100" onClick={() => setActiveCard('viewRequests')}>View Leave Requests</button>
           </div>
-          <div className="cards">
-            <div className="card-body">
-              <h3 className="card-title">Leave Requests</h3>
-            
-              <button onClick={handleFetchRequests} className="btn btn-primary mb-3">Fetch Leave Requests</button>
-              {showResponse && response && response.length > 0 ? (
-                <div>
-                  <h3>Leave Requests:</h3>
+        </div>
+        <div className="col-md-9">
+          {activeCard === 'requestLeave' && (
+            <div className="card mb-4">
+              <div className="card-body">
+                <h3 className="card-title">Request Leave</h3>
+                <form onSubmit={handleSubmit}>
+                  <div className="mb-3">
+                    <label htmlFor="leaveType" className="form-label">Leave Type:</label>
+                    <input type="text" className="form-control" id="leaveType" value={leaveType} onChange={(e) => setLeaveType(e.target.value)} />
+                  </div>
+                  <div className="mb-3">
+                    <label htmlFor="startDate" className="form-label">Start Date:</label>
+                    <input type="date" className="form-control" id="startDate" value={startDate} onChange={(e) => setStartDate(e.target.value)} />
+                  </div>
+                  <div className="mb-3">
+                    <label htmlFor="endDate" className="form-label">End Date:</label>
+                    <input type="date" className="form-control" id="endDate" value={endDate} onChange={(e) => setEndDate(e.target.value)} />
+                  </div>
+                  <button type="submit" className="btn btn-primary">Submit</button>
+                </form>
+              </div>
+            </div>
+          )}
+          {activeCard === 'viewRequests' && (
+            <div className="card">
+              <div className="card-body">
+                <h3 className="card-title">Leave Requests</h3>
+                <button onClick={handleFetchRequests} className="btn btn-primary mb-3">Fetch Leave Requests</button>
+                {showResponse && response && response.length > 0 ? (
                   <ul className="list-group">
                     {response.map(request => (
                       <li key={request.leaveRequestID} className="list-group-item">
@@ -252,13 +251,12 @@ const AddLeaveRequest = () => {
                       </li>
                     ))}
                   </ul>
-                  <button onClick={handleCancel} className="btn btn-secondary mt-3">Hide Response</button>
-                </div>
-              ) : (
-                <p>No leave requests found.</p>
-              )}
+                ) : (
+                  <p>No leave requests found.</p>
+                )}
+              </div>
             </div>
-          </div>
+          )}
         </div>
       </div>
     </div>
@@ -266,4 +264,3 @@ const AddLeaveRequest = () => {
 };
 
 export default AddLeaveRequest;
-

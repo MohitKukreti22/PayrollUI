@@ -29,7 +29,9 @@ import ManagerDetails from "./Components/Manager/ManagerDetails";
 import PayrollProcessorDetail from "./Components/PayProcessor/PayrollProcessorDetail";
 import PayrollProcessorUpdate from "./Components/PayProcessor/PayrollProcessorUpdate";
 import PrivateRouteP from "./Components/PrivateRoutes/PrivateRouteP";
-
+import PrivateRouteA from "./Components/PrivateRoutes/PrivateRouteA";
+import AdminNav from "./Components/Admin/AdminNav";
+import AdminEmployee from "./Components/Admin/AdminEmpolyee";
 
 function App() {
       return (
@@ -52,7 +54,7 @@ function App() {
               <Route path="/payprocessorlogin"element={<><PayProcessorLoginNav/><PayProcessorLogin/></>}/>
               <Route path="/ManageRequest"element={<><PrivateRouteM/><ManagerNav/><LeaveRequest/></>}/>
               <Route path="/payrollprocessor"element={<><PrivateRouteP/><PayProcessorNav/><PayrollProcessorPayroll/></>}/>
-          
+              <Route path="/AdminEmployee" element={<><PrivateRouteA/><AdminNav/><AdminEmployee/></>}/>
              <Route path="/detailEmployee"element={<><PrivateRoute/><EmployeeNav/><EmployeeDetails/></>}/>
               <Route path="/employeepayroll"element={<><PrivateRoute/><EmployeeNav/><EmployeePayrollDetails/></>}/>
               <Route path="/mangerDetails"element={<><PrivateRouteM/><ManagerNav/><ManagerDetails/></>}/>

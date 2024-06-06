@@ -27,7 +27,7 @@ function AdminLogin() {
             sessionStorage.setItem("token", res.token);
             sessionStorage.setItem("email", res.email);
             alert("Login success-" + res.email);
-            navigate('/Admindetail');
+            navigate('/AdminEmployee');
             setLoggedin(true);
             // Navigate to the dashboard after successful login
         
