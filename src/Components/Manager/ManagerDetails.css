@@ -1,0 +1,37 @@
+.manager-container {
+    max-width: 600px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #f8f9fa;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.manager-title {
+    color: #007bff;
+    text-align: center;
+}
+
+.manager-list, .manager-validation ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.manager-list li, .manager-validation li {
+    padding: 10px;
+    border-bottom: 1px solid #ccc;
+}
+
+.manager-list li:last-child, .manager-validation li:last-child {
+    border-bottom: none;
+}
+
+.manager-loading, .manager-error {
+    text-align: center;
+    font-size: 18px;
+    color: #dc3545;
+}
+
+.manager-validation {
+    margin-top: 20px;
+}

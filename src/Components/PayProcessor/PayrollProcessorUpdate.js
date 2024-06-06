@@ -244,7 +244,7 @@ function PayrollProcessorUpdate() {
               <h5 className="card-header">Change Phone Number</h5>
               <div className="card-body">
                 <div className="form-group mt-3">
-                  <input type="text" placeholder="New Phone Number" onChange={(e) => setPhone(e.target.value)} className="form-control" />
+                  <input type="text" placeholder="New Phone Number" onChange={(e) => setPhone(e.target.value)} className="forms-control" />
                   <button onClick={() => handleChangePhone(processor.payrollProcessorID)} className="btn btn-primary mt-2">Change Phone</button>
                 </div>
               </div>
@@ -257,7 +257,7 @@ function PayrollProcessorUpdate() {
               <h5 className="card-header">Change Name</h5>
               <div className="card-body">
                 <div className="form-group mt-3">
-                  <input type="text" placeholder="New Name" onChange={(e) => setName(e.target.value)} className="form-control" />
+                  <input type="text" placeholder="New Name" onChange={(e) => setName(e.target.value)} className="forms-control" />
                   <button onClick={() => handleChangeName(processor.payrollProcessorID)} className="btn btn-primary mt-2">Change Name</button>
                 </div>
               </div>
