@@ -17,7 +17,7 @@ const AdminNav = () => {
       <div className="collapse navbar-collapse justify-content-end" id="navbarSupportedContent">
         <ul className="navbar-nav">
         <li className="nav-item m-2">
-            <Link className="nav-link" to="/">Home</Link>
+            <Link className="nav-link" to="/AdminEmployee">Home</Link>
           </li>
           <li className="nav-item m-2">
             <Link className="nav-link" to="/">Account</Link>
